@@ -1,0 +1,820 @@
+:root {
+  --card-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --radius: 2px;
+  --baseFg: dimgray;
+  --baseBg: white;
+  --accentFg: #006fc2;
+  --accentBg: #bae1ff;
+  --bg-color-overlay: #c4c4c4;
+  --primary-title-color: #212121;
+  --primary-text-color: rgba(117, 117, 117, 1);
+  --primary-white-color: #ffffff;
+  --primary-black-color: #000000;
+  --secondary-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --accent-color: #2196f3;
+  --primary-icons-color: #afb1b8;
+  --bg-overlay: rgba(47, 48, 58, 0.4);
+  --portfolio-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --transorm-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-button-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* 
+	   RB4vGKR9mpfhzQS#
+	   32S8547r 
+	*/
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.page-header {
+  width: 100%;
+  background-color: rgba(140, 37, 32);
+}
+
+.search {
+  display: flex;
+}
+
+.login-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 25px;
+  background-image: url(https://medcenter-paraskeva.eu/assets/img/login.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.search-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 25px;
+  background-image: url(https://medcenter-paraskeva.eu/assets/img/search.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  transition: 0.3s;
+}
+
+.login-btn:hover,
+.login-btn:focus,
+.login-btn:active {
+  color: #cdb370;
+  text-decoration: none;
+}
+.page-header__scroll {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.page-header__grid {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.img {
+  border-radius: 3px;
+}
+
+.img:hover {
+  box-shadow: 1px 1px 35px 7px blue;
+  border-radius: 3px;
+}
+
+.page-header__left-left {
+  display: none;
+  width: calc(50% - 30px);
+}
+
+.page-header__logo {
+  padding-bottom: 10px;
+}
+
+.page-header__left-left .page-header__select-phone {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.page-header__left-left .page-header__adress--mobile {
+  display: none;
+}
+
+.page-header__left-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: calc(50% - 30px);
+}
+
+.page-header__left-right .page-header__menu-btn--mobile {
+  margin-left: 10px;
+}
+
+.page-header__left-right .page-header__adress--mobile {
+  display: none;
+}
+
+.page-header__right {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.page-header__top-line {
+  display: flex;
+  align-items: baseline;
+  margin-top: 5px;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  padding-left: 15px;
+}
+
+.page-header__bottom-line {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+}
+
+.page-header__select-region--mobile {
+  display: none;
+}
+
+.page-header__adress a {
+  color: #424242;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.page-header__adress a .uk-icon {
+  width: 15px;
+  height: 15px;
+  font-size: 14px;
+  margin-right: 5px;
+  color: #cab36c;
+}
+
+.page-header__adress--mobile {
+  margin-right: 10px;
+}
+
+.page-header__adress--mobile a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #cdb370;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.page-header__adress--mobile a:hover,
+.page-header__adress--mobile a:focus,
+.page-header__adress--mobile a:active {
+  color: #cdb370;
+  text-decoration: none;
+}
+
+.page-header__search-btn--mobile {
+  display: none;
+}
+
+.page-header__search-btn--mobile .search-btn a {
+  font-size: 0;
+}
+
+.page-header__menu-btn--mobile {
+  display: none;
+}
+
+.page-header__scroll {
+  z-index: 999;
+}
+
+@media (min-width: 960px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.uk-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.uk-navbar-nav {
+  font-family: Roboto, sans-serif;
+  list-style: none;
+  margin: 5px;
+}
+
+.uk-navbar-nav a {
+  text-decoration: none;
+  margin-left: 15px;
+  color: #ffffff;
+}
+
+.uk-navbar-nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.select-phone-modal {
+  display: none;
+}
+
+.select-lang-clik {
+  display: none;
+}
+
+.social__list {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.team-social__link {
+  margin-left: 10px;
+}
+.team-social__item {
+  margin-right: 10px;
+}
+
+.select-region__title {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.page-header__adress a {
+  text-decoration: none;
+  font-family: Roboto, Arial, sans-serif;
+  color: #ffffff;
+}
+
+.value {
+  font-family: Roboto, Arial, sans-serif;
+  color: burlywood;
+}
+
+.select-phone button {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 24px;
+  border: none;
+  outline: none;
+  background: none;
+  background-image: url(https://medcenter-paraskeva.eu/assets/img/phone-icon.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.select-lang button {
+  display: inline-block;
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  color: #424242;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+svg {
+  width: 22px;
+  height: 15px;
+  margin-left: 10px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.uk-navbar-nav > li > a {
+  position: relative;
+  margin-right: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: none;
+}
+
+.uk-navbar-nav > li > a:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  bottom: 4px;
+  height: 4px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  content: "";
+  opacity: 0;
+  transition: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uk-navbar-nav > li > a:hover:after,
+.uk-navbar-nav > li > a:focus:after,
+.uk-navbar-nav > li > a:active:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.uk-navbar-nav > li.uk-active a:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.page-main {
+  flex-grow: 1;
+}
+
+
+.main_screen {
+  background-image: url(https://integromed.org/wp-content/themes/integromed/img/gympie-road-medical-centre.jpg.pagespeed.ce.kuUCMehsuZ.jpg);
+  min-height: 500px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sl-title {
+  font-size: xxx-large;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+	.sl-title{
+		font-size: x-large;
+
+	}
+}
+
+
+.sl-info {
+  font-size: x-large;
+}
+
+.sl-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+}
+.main_slider-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  z-index: 1;
+  position: sticky;
+}
+
+.uk-breadcrumb__item {
+  list-style: none;
+}
+
+.uk-breadcrumb__main {
+  color: #191919;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.uk-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column):before {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 3px;
+  height: 3px;
+  margin: 0 10px;
+  border-radius: 90%;
+  background: #88404d;
+  content: "";
+}
+
+.section-title {
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.27;
+  font-family: monospace;
+
+  color: #666;
+}
+
+.jq-selectbox {
+  display: block;
+  width: 100%;
+}
+
+.jq-selectbox .jq-selectbox__select {
+  width: 100%;
+  height: 40px;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  line-height: 40px;
+}
+
+.jq-selectbox .jq-selectbox__trigger {
+  height: 40px;
+}
+
+.jq-selectbox .jq-selectbox__trigger-arrow {
+  top: 18px;
+}
+
+.uk-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uk-container > :last-child {
+  margin-bottom: 0;
+}
+
+.uk-breadcrumb > * {
+  flex: none;
+}
+.uk-breadcrumb > * > * {
+  color: #191919;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: monospace;
+}
+
+.uk-container > :last-child {
+  margin-bottom: 0;
+}
+
+.uk-container .uk-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.uk-container-xsmall {
+  max-width: 750px;
+}
+
+.uk-container-small {
+  max-width: 900px;
+}
+
+.uk-container-large {
+  max-width: 1400px;
+}
+
+.uk-container-xlarge {
+  max-width: 1600px;
+}
+
+.uk-container-expand {
+  max-width: none;
+}
+
+.uk-container-expand-left {
+  margin-left: 0;
+}
+
+.uk-container-expand-right {
+  margin-right: 0;
+}
+
+.uk-container-item-padding-remove-left {
+  margin-left: -15px;
+}
+
+.uk-container-item-padding-remove-right {
+  margin-right: -15px;
+}
+
+.uk-section {
+  display: flow-root;
+}
+
+.uk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uk-section-xsmall {
+  display: inline-block;
+}
+
+.js-select {
+  padding-right: 200px;
+}
+
+.page-footer {
+  padding: 50px 0 25px;
+  background: #8c2520;
+  color: #fff;
+  font-size: 12px;
+}
+
+.page-footer__title {
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.page-footer .logo {
+  display: block;
+  position: relative;
+  max-width: 200px;
+  text-align: center;
+}
+
+.page-footer .logo__link {
+  display: block;
+  position: relative;
+}
+
+.page-footer .logo__link:hover,
+.page-footer .logo__link:focus,
+.page-footer .logo__link:active {
+  text-decoration: none;
+}
+
+.page-footer .logo__img {
+  display: block;
+  position: relative;
+  margin: 0 auto 25px;
+}
+
+.page-footer .logo__title {
+  display: block;
+  position: relative;
+  color: #cdb370;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.page-footer .social {
+  margin: 20px 0 0 20px;
+}
+
+.social {
+  display: block;
+  position: relative;
+}
+
+.social__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  padding: 0;
+  justify-content: space-around;
+}
+
+.portfolio__box {
+  padding: 20px 24px;
+
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+/* ====================Portfolio-project-information==================== */
+
+.portfolio__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  color: #424242;
+  /* identical to box height, or 200% */
+}
+
+.portfolio__description {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #424242;
+  /* identical to box height, or 187% */
+}
+
+/*======================Portfolio - Overlay======================*/
+
+.portfolio__tumb {
+  position: relative;
+
+  overflow: hidden;
+  width: 100%;
+}
+
+.portfolio__text {
+  margin: 0;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  padding: 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  animation: animateY110 3000ms infinite 1000ms;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.567;
+
+  color: var(--primary-white-color);
+  background-color: rgba(140, 37, 32, 0.87);
+  /* --accent-color */
+}
+
+.portfolio__tumb > img {
+  height: 350px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.portfolio__item .portfolio__link:hover .portfolio__overlay,
+.portfolio__item .portfolio__link:focus .portfolio__overlay {
+  transform: translateY(0);
+}
+
+.portfolio__link {
+  cursor: cell;
+}
+
+.portfolio__item {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.portfolio__item {
+  /* width: calc((100% - 30px * 3) / 3); */
+  min-width: 30%;
+  width: 260px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.portfolio__item:hover,
+.portfolio__item:focus-within {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.select-flex {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.select {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.new-select__list {
+  overflow: scroll;
+  position: absolute;
+  max-height: 370px;
+  top: 45px;
+  left: 0px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(255, 251, 251, 0.918);
+  user-select: none;
+}
+
+.new-select {
+  position: relative;
+  border: 1px solid #ced4da;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 500px;
+  user-select: none;
+}
+
+.new-select__list.on {
+  display: block;
+}

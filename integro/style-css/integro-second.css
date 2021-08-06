@@ -1,0 +1,35 @@
+@keyframes eye {
+	90% {
+		transform: none;
+	}
+	95% {
+		transform: scaleY(0.1);
+	}
+}
+
+@keyframes animate125 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.96);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.new-select__item span {
+	display: block;
+	transition: animation 350ms cubic-bezier(0.4, 0, 0.2, 1);
+	padding: 10px 15px;
+	transition: text-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.new-select__item span:hover {
+	animation: animate125 350ms cubic-bezier(0.4, 0, 0.2, 1);
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(83, 0, 0), 0 0 0.2em rgb(255, 255, 255);
+}
