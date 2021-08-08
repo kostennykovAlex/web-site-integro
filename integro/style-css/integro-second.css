@@ -1,11 +1,25 @@
-@keyframes eye {
-	90% {
-		transform: none;
-	}
-	95% {
-		transform: scaleY(0.1);
-	}
-}
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  .animate__pulse:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
 
 @keyframes animate125 {
 	0% {
@@ -28,8 +42,342 @@
 	transition: text-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.new-select__item span:hover {
+@keyframes animate130 {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.10);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+.new-select__item span:hover,
+.new-select__item span:focus {
+	background-color: #2196f3;
+	border-radius: 5px;
 	animation: animate125 350ms cubic-bezier(0.4, 0, 0.2, 1);
 	color: rgb(255, 255, 255);
-	text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(83, 0, 0), 0 0 0.2em rgb(255, 255, 255);
+}
+
+
+.dec__float {
+    position: fixed;
+    z-index: 999999;
+    top: 70%;
+    left: 90%;
+    background: #8c2520;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: scale(1);
+	animation: animate130 3000ms infinite 1000ms, 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.dec__float:hover,
+.dec__float:focus,
+.dec__float-size:focus,
+.dec__float-size:hover
+ {
+	animation: animate125 350ms cubic-bezier(0.4, 0, 0.2, 1);
+	color: #8c2520;
+}
+
+.dec__float-size {
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	padding: 30px;
+	font-size: 15px;
+}
+
+
+.social-list .facebook {
+    background: url(https://medcenter-paraskeva.eu/assets/img/facebook.svg) no-repeat center;
+    background-size: contain;
+}
+
+.page-footer {
+	/* padding: 50px 0 25px; */
+	background: rgba(140, 37, 32);
+	color: #fff;
+	font-size: 12px;
+  }
+
+  
+.page-footer__title {
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase
+}
+
+.page-footer .logo {
+    display: block;
+    position: relative;
+    max-width: 200px;
+    text-align: center
+}
+
+.page-footer .logo__link {
+    display: block;
+    position: relative
+}
+
+.page-footer .logo__link:hover,
+.page-footer .logo__link:focus,
+.page-footer .logo__link:active {
+    text-decoration: none
+}
+
+.page-footer .logo__img {
+    display: block;
+    position: relative;
+    margin: 0 auto 25px
+}
+
+.page-footer .logo__title {
+    display: block;
+	margin-top: 15px;
+    position: relative;
+    color: #cdb370;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px
+}
+
+.page-footer-flex {
+	display: flex;
+	padding: 44px 0px;
+}
+
+.page-footer-address {
+	margin: 0 80px;
+}
+
+.data-uk-grid {
+	display: flex;
+}
+
+.page-footer__title {
+	display: flex;
+	justify-content: center;
+}
+
+.page-footer__address{
+
+	display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.uk-first-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.uk-first {
+	display: flex;
+    list-style: none;
+}
+
+.s-king-inverse {
+	background-image:url(https://integromed.org/wp-content/themes/integromed/img/slider/slide3.webp.pagespeed.ce.0FLDbBtuWJ.webp);
+	background-attachment:fixed;
+	min-height: 400px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+}
+
+.section-overlay {
+    position: relative
+}
+
+.s-king-inverse::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-overlay::before {
+	content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.col-md-5 {
+    width: 41.66666667%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.s-king-inverse h2 {
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.s-king-inverse p {
+    font-size: 20px;
+}
+.s-king-inverse p {
+    margin: 30px 0;
+}
+
+.section-gallery {
+	padding: 40px;
+}
+
+.col-md-7 {
+    width: 58.33333333%;
+}
+
+
+.footer-img {
+	width: 100%;
+}
+
+.page-footer-contact {
+	margin-left: 150px;
+}
+
+.footer-social__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    justify-items: start;
+    padding-left: 0;
+}
+
+.row {
+	position: relative;
+	display: flex;
+}
+
+.row::before {
+    display: table;
+    content: " ";
+}
+
+
+.mt-5 {
+		padding: 28px;
+		box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+	
+.mb-5 {
+		margin-bottom: 5rem
+
+	}
+
+.hs_heading {
+	border-top: 2px solid #e54242;
+
+		color: #8c2520;
+		margin-top: 0;
+		margin-bottom: 10px;
+		font-size: 30px;
+		position: relative;
+	}
+
+	.hs_how_we_are_text {
+		background: #f5f5f5;
+		border-bottom: 2px solid #e54242;
+		padding: 30px;
+		font-size: 18px;
+	}
+
+.whoiswho  {
+	background-color: #fff;
+}
+
+
+.hs_how_we_are_text p  {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.contact-item {
+    margin-right: 40px;
+	max-width: 350px;
+}
+
+.uk-margin-medium-top {
+	padding-bottom: 50px;
+	align-items: center;
+}
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+.animate__pulse:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+ 
+  .form-group {
+    margin-left: 40px;
+    align-content: normal;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+.g_map {
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://integromed.org/wp-content/themes/integromed/img/google_map.webp.pagespeed.ce.OZ6ZULSiUg.webp);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
